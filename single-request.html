@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Performance Management Tracking">
+    <title>PTMI</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
+
+
+    <!-- vendor css -->
+    <link href="../../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+		<!-- DashForge CSS -->
+    <link rel="stylesheet" href="./assets/css/ptmi.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
+  </head>
+  <body class="page-profile">
+
+    <header class="navbar navbar-header navbar-header-fixed bg-white shadow-sm">
+			<div class="container">
+				<a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+      <div class="navbar-brand">
+        <a href="../../index.html" class="df-logo">PTMI</a>
+      </div><!-- navbar-brand -->
+      <div id="navbarMenu" class="navbar-menu-wrapper">
+        <div class="navbar-menu-header">
+          <a href="../../index.html" class="df-logo">PTMI</a>
+          <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+        </div>
+        <ul class="nav navbar-menu">
+          
+        </ul>
+      </div>
+      <div class="navbar-right">
+			<div>View as</div>	
+			<div class="ml-3">
+        <div class="styled">
+          <select class="custom-select" type="button" onChange="window.location.href=this.value">
+            <option selected>Individual</option>
+            <option value="/supervisor.html">Supervisor</option>
+            <option value="/division.html">Division Head</option>
+            <option value="/management.html">Management</option>
+          </select>
+        </div>
+			</div>
+				<div class="avatar avatar-sm ml-3"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+      </div>
+			</div>
+    </header>
+
+    <div class="content content-fixed pd-0">
+			<section class="bg-greyish pd-y-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-12">
+              <button onclick="goBack()" class="btn btn-back tx-uppercase tx-11 tx-medium pd-l-0"><i data-feather="arrow-left"></i> Go Back</button>
+							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-5">CIO ORGANIZATION</h4>
+						</div>
+						<div class="col-md-6 row pd-r-0">
+              <div class="col-md-6">
+                  <label for="" class="mb-0">Search Projects</label>
+                <div class="search-form">
+                  <input type="search" class="form-control" placeholder="Search">
+                  <button class="btn" type="button"><i data-feather="search"></i></button>
+                </div>
+              </div>
+							<div class="col-md-6 pd-r-0">
+                  <label for="" class="mb-0">Current data source</label>
+                <div class="form">
+                  <input type="text" id="datepicker" class="form-control" placeholder="select date"></p>
+                </div>
+              </div>
+						</div>
+					</div>
+	
+				</div>
+			</section>
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3">
+        <section class="request-info pd-y-30">
+          <div class="d-flex justify-content-between">
+            <h3>HR Automation</h3>
+            <p>
+              <span class="badge badge-request tx-14 tx-normal pd-x-10">Parent Request</span>
+            </p>
+          </div>
+          <div class="col-lg-8 col-12 pd-x-0">
+            <p>Automation of UBA Group's HR Platform including features for: Core HR, Organization Design, Man Power Planning, Recruitment, Performance Management, Personnel Management, Talent management Training, Payroll and Alumni.</p>
+          </div>
+          <div class="card card-bg-gray">
+            <div class="card-body pd-y-10">
+              <div class="row">
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Entry Date</p>
+                  <small class="tx-12 mg-b-0">12th December 2020</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Closed Date</p>
+                  <small class="tx-12 mg-b-0">5th February 2020</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Initiating Unit </p>
+                  <small class="tx-12 mg-b-0">Innovation Team</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Initated By</p>
+                  <small class="tx-12 mg-b-0">Adegoke Ayanfe</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Request Status</p>
+                  <small class="tx-12 mg-b-0">Pending</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Request Closed Date</p>
+                  <small class="tx-12 mg-b-0">5th February 2020</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Version Count</p>
+                  <small class="tx-12 mg-b-0">5 Versions</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">SLA (Hours)</p>
+                  <small class="tx-12 mg-b-0">360 Hours</small>
+                </div>
+              </div>
+            </div>
+            <div class="card-body pd-y-20 bd-t">
+              <div class="row">
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">SLA Status</p>
+                  <small class="tx-12 mg-b-0">Adherence</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Day to Breach</p>
+                  <small class="tx-12 mg-b-0">29 Days</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Backlogs</p>
+                  <small class="tx-12 mg-b-0">2 Backlogs</small>
+                </div>
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">Escalations</p>
+                  <small class="tx-12 mg-b-0">1 Escalations</small>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between card-footer-bg">
+              <p class="comment-box pd-x-20 pd-y-5 mb-0">Comment (4)</p>
+              <button class="btn btn-primary btn-sm pd-x-25 pd-y-5">Escalate</button>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="project-info mb-3">
+          <div class="row">
+            <div class="col-lg-8 col-xl-8 col-12">
+          <h3>Project Comments</h3>
+
+              <div class="card">
+                <div class="card-body pd-15">
+                  <div id="accordion">
+                    <div class="card accordion-bg">
+                      <div class="card-header pd-y-10" id="headingOne">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <div>
+                            <small class="tx-12 text-muted mb-0">Submitted by</small>
+                            <p class="tx-semibold mb-0">Ayodeji Ayomide</p>
+                          </div>
+                          <div>
+                            <small class="tx-12 text-muted mb-0">Submitted on</small>
+                            <p class="tx-semibold mb-0 tx-14">15th December 2020</p>
+                          </div> 
+                        </div>                   
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body pd-y-15">
+                          <p class="tx-13 text-muted mb-0">
+                            Payroll management is still in its design phase and willbe moved to development soon. 
+                            A prototype was presented during the teams meeting where feedback was provided by Goke. Project is currently being managed by John.
+                          </p>
+                          
+                          </div>
+                        </div>
+                      </div>
+                      
+                    
+                    <div class="card accordion-bg mt-3">
+                      <div class="card-header pd-y-10" id="headingTwo">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                          <div>
+                            <small class="tx-12 text-muted mb-0">Submitted by</small>
+                            <p class="tx-semibold mb-0">Ayodeji Ayomide</p>
+                          </div>
+                          <div>
+                            <small class="tx-12 text-muted mb-0">Submitted on</small>
+                            <p class="tx-semibold mb-0 tx-14">15th December 2020</p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body pd-y-15">
+                          <p class="tx-13 text-muted mb-0">
+                            Payroll management is still in its design phase and willbe moved to development soon. 
+                            A prototype was presented during the teams meeting where feedback was provided by Goke. Project is currently being managed by John.
+                          </p>
+                          
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card accordion-bg mt-3">
+                      <div class="card-header pd-y-10" id="headingThree">
+                        <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                          <div>
+                            <small class="tx-12 text-muted mb-0">Submitted by</small>
+                            <p class="tx-semibold mb-0">Ayodeji Ayomide</p>
+                          </div>
+                          <div>
+                            <small class="tx-12 text-muted mb-0">Submitted on</small>
+                            <p class="tx-semibold mb-0 tx-14">15th December 2020</p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body py-15">
+                          <p class="tx-13 text-muted mb-0">
+                            Payroll management is still in its design phase and willbe moved to development soon. 
+                            A prototype was presented during the teams meeting where feedback was provided by Goke. Project is currently being managed by John.
+                          </p>
+                        </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xl-4 col-12">
+             <h3>Project Escalations</h3>
+              <div class="card">
+                <div class="card-body pd-15">
+                    <ul class="list-group list-group-flush tx-13 ">
+                      <li class="list-group-item d-flex accordion-bg">
+                        <div class="avatar d-none d-sm-block"><span class="avatar-initial rounded-circle bg-teal"><i class="icon ion-md-checkmark"></i></span></div>
+                        <div class="pd-sm-l-10">
+                          <p class="tx-semibold mg-b-0 tx-14">Akosa, Onyebuchi</p>
+                          <small class="tx-12 tx-color-03 mg-b-0">14th December 2020</small>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+
+    
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/feather-icons/feather.min.js"></script>
+    <script src="../../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.stack.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.resize.js"></script>
+
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="../../lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+   
+  </body>
+</html>

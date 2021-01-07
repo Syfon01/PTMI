@@ -185,7 +185,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr class="table-row" data-href="/single-request.html">
                         <td class="">HR Automation - Leave Module Management</td>
                         <td class="">November 12, 2020</td>
                         <td class="">360</td>
@@ -517,6 +517,13 @@ var ctx1 = document.getElementById('chartBar2').getContext('2d');
 
         $('#datepicker1').datepicker();
       })
+
+      //clickable row
+      $(document).ready(function($) {
+       $(".table-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
     </script>
   </body>
 </html>
