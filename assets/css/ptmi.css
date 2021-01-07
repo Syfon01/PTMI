@@ -1,0 +1,44 @@
+.bg-greyish{
+ background: #F4F4F4;
+}
+.card-height{
+    height: 4.5rem;
+}
+.home-link:hover{
+    color:#000;
+    font-weight: 500;
+}
+.color-02{
+    color: #696969;
+}
+.bg-deep-blue{
+    background-color: #002062;
+}
+.bg-light-blue{
+    background-color: #00D0D0;
+}
+.table thead th, .table tbody th{
+    font-weight: 400!important;
+}
+.badge-adhered{
+    background-color: #D48AEF;
+}
+.badge-completed{
+    background-color: rgba(111, 238, 162, 1);
+}
+.badge-pending{
+    background-color: #EBA25E;
+}
+.badge-breached{
+    background-color: #EE6464;
+}
+.custom-select{
+    background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='red' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.625rem center/8px 10px!important;
+    border: 1px solid #EE6464!important;
+}
+.badge-position{
+    background:rgba(234, 213, 237, 1)
+}
+.table-sm th, .table-sm td{
+    padding: 10px 15px!important;
+}

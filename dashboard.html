@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Performance Management Tracking">
+    <title>PTMI</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
+
+
+    <!-- vendor css -->
+    <link href="../../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+		<!-- DashForge CSS -->
+    <link rel="stylesheet" href="./assets/css/ptmi.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
+  </head>
+  <body class="page-profile">
+
+    <header class="navbar navbar-header navbar-header-fixed bg-white shadow-sm">
+			<div class="container">
+				<a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+      <div class="navbar-brand">
+        <a href="../../index.html" class="df-logo">PTMI</a>
+      </div><!-- navbar-brand -->
+      <div id="navbarMenu" class="navbar-menu-wrapper">
+        <div class="navbar-menu-header">
+          <a href="../../index.html" class="df-logo">PTMI</a>
+          <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+        </div>
+        <ul class="nav navbar-menu">
+          
+        </ul>
+      </div>
+      <div class="navbar-right">
+			<div>View as</div>	
+			<div class="ml-3">
+        <div class="styled">
+          <select class="custom-select" type="button">
+            <option selected>Individual</option>
+            <option value="1">Surpervisor</option>
+            <option value="2">Division Head</option>
+            <option value="3">Management</option>
+          </select>
+          
+        </div>
+				
+			</div>
+				
+				<div class="avatar avatar-sm ml-3"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+      </div>
+			</div>
+    </header>
+
+    <div class="content content-fixed pd-0">
+			<section class="bg-greyish pd-y-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-20">WELCOME BUNMI</h4>
+						</div>
+						<div class="col-md-6 row pd-r-0">
+              <div class="col-md-6">
+                  <label for="" class="mb-0">Search Projects</label>
+                <div class="search-form">
+                  <input type="search" class="form-control" placeholder="Search">
+                  <button class="btn" type="button"><i data-feather="search"></i></button>
+                </div>
+              </div>
+							<div class="col-md-6 pd-r-0">
+                  <label for="" class="mb-0">Current data source</label>
+                <div class="form">
+                  <input type="text" id="datepicker" class="form-control" placeholder="select date"></p>
+                </div>
+              </div>
+						</div>
+					</div>
+	
+				</div>
+			</section>
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3">
+        <div class="row mg-b-20">
+          <div class="col-md-3 col-12 mt-2">
+            <a href="http://" class="tx-dark home-link">
+              <div class="card card-body pd-15 card-height">
+                <div class="d-flex justify-content-between">
+                  <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Logged Requests</p>
+                  <h1 class="mb-0">43</h1>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-12 mt-2">
+            <a href="http://" class="tx-dark home-link">
+              <div class="card card-body pd-15 card-height">
+                <div class="d-flex justify-content-between">
+                  <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Pending Requests</p>
+                  <h1 class="mb-0">43</h1>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-12 mt-2">
+            <a href="http://" class="tx-dark home-link">
+              <div class="card card-body pd-15 card-height">
+                <div class="d-flex justify-content-between">
+                  <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Breached SLA Requests</p>
+                  <h1 class="mb-0">43</h1>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-3 col-12 mt-2">
+            <a href="http://" class="tx-dark home-link">
+              <div class="card card-body pd-x-15 pd-y-10 card-height">
+                <div class="d-flex justify-content-between">
+                  <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Completed Request within SLA</p>
+                  <h1 class="mb-0">43</h1>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row row-xs">
+                  
+        <div class="col-lg-6 col-xl-6 col-12">
+            <div class="card">
+              <div class="card-header pd-y-15 pd-x-20">
+                <div>
+                  <p class="tx-12 tx-uppercase color-02 tx-semibold mb-0">Total Bridged vs. Total Logged Graph</p>
+                </div>
+                
+              </div><!-- card-header -->
+              
+              <div class="card-body pd-lg-25">
+                <div class="row align-items-sm-end">
+                  <div class="col-lg-12 col-xl-12 col-12">
+                    <div class="chart-six"><canvas id="chartBar1"></canvas></div>
+                  </div>
+                </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+				</div>
+				<div class="col-lg-6 col-xl-6 col-12">
+					<div class="card">
+						<div class="card-header pd-y-15 pd-x-20">
+							<div>
+								<p class="tx-12 tx-uppercase color-02 tx-semibold mb-0">Total Completed vs. Total Logged Graph</p>
+							</div>
+							
+						</div><!-- card-header -->
+						
+						<div class="card-body pd-lg-25">
+							<div class="row align-items-sm-end">
+								<div class="col-lg-12 col-xl-12 col-12">
+									<div class="chart-six"><canvas id="chartBar2"></canvas></div>
+								</div>
+							</div>
+						</div><!-- card-body -->
+					</div><!-- card -->
+			</div>
+         
+          
+          <div class="col-lg-8 col-md-8 col-12 mg-t-20">
+            <div class="card">
+              <div class="card-header d-sm-flex align-items-start justify-content-between pd-y-15 pd-x-20">
+                <p class="mg-b-0 tx-12 color-02 tx-uppercase tx-semibold">Your Requests</p>
+                <a href="" class="tx-11 btn btn-outline-dark pd-y-5 btn-sm tx-black tx-medium">View all Requests</a>
+              </div><!-- card-header -->
+              <div class="card-body pd-y-0 pd-x-0">
+                <div class="table-responsive">
+                  <table class="table table-border table-sm tx-13 tx-nowrap mg-b-0">
+                    <thead>
+                      <tr class="tx-14 tx-spacing-1 tx-gray-800 tx-normal bg-gray-100">
+                        <th>Title</th>
+                        <th class="">Date Created</th>
+                        <th class="">SLA (hrs)</th>
+                        <th class="">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="">HR Automation - Leave Module Management</td>
+                        <td class="">November 12, 2020</td>
+                        <td class="">360</td>
+                        <td class=""><span class="badge badge-adhered pd-x-20 pd-t-5">Adhered</span></td>
+                      </tr>
+                      <tr>
+                        <td class="">HR Automation - Manpower Module Managementt</td>
+                        <td class="">November 12, 2020</td>
+                        <td class="">200</td>
+                        <td class=""><span class="badge badge-completed pd-x-15 pd-t-5">Completed</span></td>
+                      </tr>
+                      <tr>
+                        <td class="">HR Automation - Payroll Management</td>
+                        <td class="">November 12, 2020</td>
+                        <td class="">300</td>
+                        <td class=""><span class="badge badge-completed pd-x-15 pd-t-5">Completed</span></td>
+                      </tr>
+                      <tr>
+                        <td class="">HR Automation - Rewards and Sanctions</td>
+                        <td class="">November 12, 2020</td>
+                        <td class="">360</td>
+                        <td class=""><span class="badge badge-pending pd-x-20 pd-t-5">Pending</span></td>
+                      </tr>
+                      <tr>
+                        <td class="">HR Automation - Management</td>
+                        <td class="">November 12, 2020</td>
+                        <td class="">160</td>
+                        <td class=""><span class="badge badge-breached pd-x-20 pd-t-5">Breached</span></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div><!-- table-responsive -->
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+          
+          <div class="col-md-4 col-lg-4 col-12 col-xl-4 mg-t-20">
+            <div class="card">
+              <div class="card-header pd-y-15 pd-x-20">
+                <p class="mg-b-0 tx-12 color-02 tx-uppercase tx-semibold">Analysis chart</p>
+              </div><!-- card-header -->
+              <div class="card-body pd-lg-25">
+                <p class="tx-12 color-02">Comparing the percentage SLA breached to the percentage that has been adhered.</p>
+                <div class="chart-seven"><canvas id="chartDonut"></canvas></div>
+              </div><!-- card-body -->
+              <div class="card-footer pd-20">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <div class="wd-10 ht-10 rounded-circle bg-deep-blue mg-r-5"></div>
+                      <h5 class="tx-normal tx-rubik mg-b-0">Breached<small class="tx-color-04 ml-3">75%</small></h5>
+                    </div>
+                  </div><!-- col -->
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <div class="wd-10 ht-10 rounded-circle bg-light-blue mg-r-5"></div>
+                      <h5 class="tx-normal tx-rubik mg-b-0">Adhered <small class="tx-color-04 ml-3">25%</small></h5>
+                    </div>
+                  </div><!-- col -->
+                  
+                </div><!-- row -->
+              </div><!-- card-footer -->
+            </div><!-- card -->
+          </div>
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- content -->
+
+
+
+    
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/feather-icons/feather.min.js"></script>
+    <script src="../../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.stack.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.resize.js"></script>
+
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="../../lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+
+    <script>
+      $(function(){
+        'use strict'
+
+        var ctx1 = document.getElementById('chartBar1').getContext('2d');
+        new Chart(ctx1, {
+          type: 'bar',
+          data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            datasets: [{
+              data: [150,110,90,115,125,160,160,140,100,110,120,120],
+              backgroundColor: '#002062'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#00D0D0'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+                labels: {
+                  display: false
+                }
+            },
+            scales: {
+              xAxes: [{
+                display: true,
+                barPercentage: 0.5
+              }],
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  fontColor: '#8392a5',
+                  fontSize: 10,
+                  min: 80,
+                  max: 200
+                }
+              }]
+            }
+          }
+        });
+
+// second graph
+var ctx1 = document.getElementById('chartBar2').getContext('2d');
+        new Chart(ctx1, {
+          type: 'bar',
+          data: {
+            labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            datasets: [{
+              data: [150,110,90,115,125,160,160,140,100,110,120,120],
+              backgroundColor: '#002062'
+            },{
+              data: [180,140,120,135,155,170,180,150,140,150,130,130],
+              backgroundColor: '#00D0D0'
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+                labels: {
+                  display: false
+                }
+            },
+            scales: {
+              xAxes: [{
+                display: true,
+                barPercentage: 0.5
+              }],
+              yAxes: [{
+                gridLines: {
+                  color: '#ebeef3'
+                },
+                ticks: {
+                  fontColor: '#8392a5',
+                  fontSize: 10,
+                  min: 80,
+                  max: 200
+                }
+              }]
+            }
+          }
+        });
+
+        /** PIE CHART **/
+        var datapie = {
+          labels: ['Breached', 'Adhered'],
+          datasets: [{
+            data: [75,25],
+            backgroundColor: ['#002062', '#00D0D0']
+          }]
+        };
+
+        var optionpie = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a pie chart
+        var ctx2 = document.getElementById('chartDonut');
+        var myDonutChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: datapie,
+          options: optionpie
+        });
+
+
+        $.plot('#flotChart1', [{
+            data: df1,
+            color: '#c0ccda',
+            lines: {
+              fill: true,
+              fillColor: '#f5f6fa'
+            }
+          },{
+              data: df3,
+              color: '#0168fa',
+              lines: {
+                fill: true,
+                fillColor: '#d1e6fa'
+              }
+            }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 1.5
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            max: 65
+          },
+    			xaxis: {
+            show: false,
+            min: 40,
+            max: 100
+          }
+    		});
+
+
+        $.plot('#flotChart2', [{
+          data: df2,
+          color: '#66a4fb',
+          lines: {
+            show: true,
+            lineWidth: 1.5,
+            fill: .03
+          }
+        },{
+          data: df1,
+          color: '#00cccc',
+          lines: {
+            show: true,
+            lineWidth: 1.5,
+            fill: true,
+            fillColor: '#fff'
+          }
+        },{
+          data: df3,
+          color: '#e3e7ed',
+          bars: {
+            show: true,
+            lineWidth: 0,
+            barWidth: .5,
+            fill: 1
+          }
+        }], {
+          series: {
+            shadowSize: 0
+          },
+          grid: {
+            aboveData: true,
+            color: '#e5e9f2',
+            borderWidth: {
+              top: 0,
+              right: 1,
+              bottom: 1,
+              left: 1
+            },
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+    			xaxis: {
+            show: true,
+            min: 40,
+            max: 80,
+            ticks: 6,
+            tickColor: 'rgba(0,0,0,0.04)'
+          }
+    		});
+
+        var df3data1 = [[0,12],[1,10],[2,7],[3,11],[4,15],[5,20],[6,22],[7,19],[8,18],[9,20],[10,17],[11,19],[12,18],[13,14],[14,9]];
+        var df3data2 = [[0,0],[1,0],[2,0],[3,2],[4,5],[5,2],[6,12],[7,15],[8,10],[9,8],[10,10],[11,7],[12,2],[13,4],[14,0]];
+        
+        var flotChartOption1 = {
+          series: {
+            shadowSize: 0,
+            bars: {
+              show: true,
+              lineWidth: 0,
+              barWidth: .5,
+              fill: 1
+            }
+          },
+          grid: {
+            aboveData: true,
+            color: '#e5e9f2',
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: false,
+            min: 0,
+            max: 25
+          },
+    			xaxis: {
+            show: false
+          }
+    		};
+
+        // datepicker
+
+        $('#datepicker1').datepicker();
+      })
+    </script>
+  </body>
+</html>
