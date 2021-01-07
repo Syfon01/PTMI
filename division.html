@@ -42,11 +42,11 @@
 			<div>View as</div>	
 			<div class="ml-3">
         <div class="styled">
-          <select class="custom-select" type="button">
-            <option selected>Individual</option>
-            <option value="1">Surpervisor</option>
-            <option value="2">Division Head</option>
-            <option value="3">Management</option>
+          <select class="custom-select" type="button" onChange="window.location.href=this.value">
+            <option selected>Division Head</option>
+            <option value="/dashboard.html">Individual</option>
+            <option value="/supervisor.html">Supervisor</option>
+            <option value="/management.html">Management</option>
           </select>
           
         </div>
@@ -419,7 +419,7 @@
       $(function(){
         'use strict'
 
-        const ctx1 = document.getElementById('chartBar1').getContext('2d');
+        var ctx1 = document.getElementById('chartBar1').getContext('2d');
         new Chart(ctx1, {
           type: 'bar',
           data: {
@@ -461,7 +461,7 @@
         });
 
 // second graph
-const ctx1 = document.getElementById('chartBar2').getContext('2d');
+var ctx1 = document.getElementById('chartBar2').getContext('2d');
         new Chart(ctx1, {
           type: 'bar',
           data: {
@@ -503,7 +503,7 @@ const ctx1 = document.getElementById('chartBar2').getContext('2d');
         });
 
         /** PIE CHART **/
-        const datapie = {
+        var datapie = {
           labels: ['Breached', 'Adhered'],
           datasets: [{
             data: [75,25],
@@ -511,7 +511,7 @@ const ctx1 = document.getElementById('chartBar2').getContext('2d');
           }]
         };
 
-        const optionpie = {
+        var optionpie = {
           maintainAspectRatio: false,
           responsive: true,
           legend: {
@@ -524,8 +524,8 @@ const ctx1 = document.getElementById('chartBar2').getContext('2d');
         };
 
         // For a pie chart
-        const ctx2 = document.getElementById('chartDonut');
-        const myDonutChart = new Chart(ctx2, {
+        var ctx2 = document.getElementById('chartDonut');
+        var myDonutChart = new Chart(ctx2, {
           type: 'doughnut',
           data: datapie,
           options: optionpie
@@ -625,10 +625,10 @@ const ctx1 = document.getElementById('chartBar2').getContext('2d');
           }
     		});
 
-        const df3data1 = [[0,12],[1,10],[2,7],[3,11],[4,15],[5,20],[6,22],[7,19],[8,18],[9,20],[10,17],[11,19],[12,18],[13,14],[14,9]];
-        const df3data2 = [[0,0],[1,0],[2,0],[3,2],[4,5],[5,2],[6,12],[7,15],[8,10],[9,8],[10,10],[11,7],[12,2],[13,4],[14,0]];
+        var df3data1 = [[0,12],[1,10],[2,7],[3,11],[4,15],[5,20],[6,22],[7,19],[8,18],[9,20],[10,17],[11,19],[12,18],[13,14],[14,9]];
+        var df3data2 = [[0,0],[1,0],[2,0],[3,2],[4,5],[5,2],[6,12],[7,15],[8,10],[9,8],[10,10],[11,7],[12,2],[13,4],[14,0]];
         
-        const flotChartOption1 = {
+        var flotChartOption1 = {
           series: {
             shadowSize: 0,
             bars: {

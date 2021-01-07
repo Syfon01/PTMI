@@ -42,11 +42,11 @@
 			<div>View as</div>	
 			<div class="ml-3">
         <div class="styled">
-          <select class="custom-select" type="button">
-            <option selected>Individual</option>
-            <option value="1">Surpervisor</option>
-            <option value="2">Division Head</option>
-            <option value="3">Management</option>
+          <select class="custom-select" type="button" onChange="window.location.href=this.value">
+            <option selected>Management</option>
+            <option value="/dashboard.html">Individual</option>
+            <option value="/supervisor.html">Supervisor</option>
+            <option value="/division.html">Division Head</option>
           </select>
           
         </div>
