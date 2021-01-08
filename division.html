@@ -66,10 +66,12 @@
 						<div class="col-md-6 row pd-r-0">
               <div class="col-md-6">
                   <label for="" class="mb-0">Search Projects</label>
-                <div class="search-form">
-                  <input type="search" class="form-control" placeholder="Search">
-                  <button class="btn" type="button"><i data-feather="search"></i></button>
-                </div>
+                  <form action="/search.html">
+                    <div class="search-form">
+                      <input type="search" class="form-control" placeholder="Search">
+                      <button class="btn" type="button" id="searchButton"><i data-feather="search"></i></button>
+                    </div>
+                  </form>
               </div>
 							<div class="col-md-6 pd-r-0">
                   <label for="" class="mb-0">Current data source</label>
@@ -85,7 +87,7 @@
       <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3">
         <div class="row mg-b-20">
           <div class="col-md-3 col-12 mt-2">
-            <a href="http://" class="tx-dark home-link">
+            <a href="./requests.html" class="tx-dark home-link">
               <div class="card card-body pd-15 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Logged Requests</p>
@@ -95,7 +97,7 @@
             </a>
           </div>
           <div class="col-md-3 col-12 mt-2">
-            <a href="http://" class="tx-dark home-link">
+            <a href="./requests.html" class="tx-dark home-link">
               <div class="card card-body pd-15 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Pending Requests</p>
@@ -105,7 +107,7 @@
             </a>
           </div>
           <div class="col-md-3 col-12 mt-2">
-            <a href="http://" class="tx-dark home-link">
+            <a href="./requests.html" class="tx-dark home-link">
               <div class="card card-body pd-15 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Breached SLA Requests</p>
@@ -115,7 +117,7 @@
             </a>
           </div>
           <div class="col-md-3 col-12 mt-2">
-            <a href="http://" class="tx-dark home-link">
+            <a href="./requests.html" class="tx-dark home-link">
               <div class="card card-body pd-x-15 pd-y-10 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Completed Request within SLA</p>

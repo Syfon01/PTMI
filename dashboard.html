@@ -68,10 +68,12 @@
 						<div class="col-md-6 row pd-r-0">
               <div class="col-md-6">
                   <label for="" class="mb-0">Search Projects</label>
-                <div class="search-form">
-                  <input type="search" class="form-control" placeholder="Search">
-                  <button class="btn" type="button"><i data-feather="search"></i></button>
-                </div>
+                  <form action="/search.html">
+                    <div class="search-form">
+                      <input type="search" class="form-control" placeholder="Search">
+                      <button class="btn" type="button" id="searchButton"><i data-feather="search"></i></button>
+                    </div>
+                  </form>
               </div>
 							<div class="col-md-6 pd-r-0">
                   <label for="" class="mb-0">Current data source</label>
@@ -191,25 +193,25 @@
                         <td class="">360</td>
                         <td class=""><span class="badge badge-adhered pd-x-20 pd-t-5">Adhered</span></td>
                       </tr>
-                      <tr>
+                      <tr class="table-row" data-href="/single-request.html">
                         <td class="">HR Automation - Manpower Module Managementt</td>
                         <td class="">November 12, 2020</td>
                         <td class="">200</td>
                         <td class=""><span class="badge badge-completed pd-x-15 pd-t-5">Completed</span></td>
                       </tr>
-                      <tr>
+                      <tr class="table-row" data-href="/single-request.html">
                         <td class="">HR Automation - Payroll Management</td>
                         <td class="">November 12, 2020</td>
                         <td class="">300</td>
                         <td class=""><span class="badge badge-completed pd-x-15 pd-t-5">Completed</span></td>
                       </tr>
-                      <tr>
+                      <tr class="table-row" data-href="/single-request.html">
                         <td class="">HR Automation - Rewards and Sanctions</td>
                         <td class="">November 12, 2020</td>
                         <td class="">360</td>
                         <td class=""><span class="badge badge-pending pd-x-20 pd-t-5">Pending</span></td>
                       </tr>
-                      <tr>
+                      <tr class="table-row" data-href="/single-request.html">
                         <td class="">HR Automation - Management</td>
                         <td class="">November 12, 2020</td>
                         <td class="">160</td>
@@ -523,6 +525,7 @@ var ctx1 = document.getElementById('chartBar2').getContext('2d');
        $(".table-row").click(function() {
         window.document.location = $(this).data("href");
     });
+    
 });
     </script>
   </body>
