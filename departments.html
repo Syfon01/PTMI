@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Performance Management Tracking">
+    <title>PTMI</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
+
+
+    <!-- vendor css -->
+    <link href="../../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+		<!-- DashForge CSS -->
+    <link rel="stylesheet" href="./assets/css/ptmi.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
+  </head>
+  <body class="page-breached">
+
+    <header class="navbar navbar-header navbar-header-fixed bg-white shadow-sm">
+			<div class="container">
+				<a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+      <div class="navbar-brand">
+        <a href="../../index.html" class="df-logo">PTMI</a>
+      </div><!-- navbar-brand -->
+      <div id="navbarMenu" class="navbar-menu-wrapper">
+        <div class="navbar-menu-header">
+          <a href="../../index.html" class="df-logo">PTMI</a>
+          <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+        </div>
+        <ul class="nav navbar-menu">
+          
+        </ul>
+      </div>
+      <div class="navbar-right">
+			<div>View as</div>	
+			<div class="ml-3">
+        <div class="styled">
+          <select class="custom-select" type="button" onChange="window.location.href=this.value">
+            <option selected>Individual</option>
+            <option value="/supervisor.html">Supervisor</option>
+            <option value="/division.html">Division Head</option>
+            <option value="/management.html">Management</option>
+          </select>
+        </div>
+			</div>
+				<div class="avatar avatar-sm ml-3"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+      </div>
+			</div>
+    </header>
+
+    <div class="content content-fixed pd-0">
+			<section class="bg-greyish pd-y-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-12">
+              <button onclick="goBack()" class="btn btn-back tx-uppercase tx-11 tx-medium pd-l-0"><i data-feather="arrow-left"></i> Go Back</button>
+							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-5">All Departments</h4>
+						</div>
+						<div class="col-md-6 row pd-r-0">
+              <div class="col-md-6"></div>
+              <div class="col-md-6 pd-r-0">
+                  <label for="" class="mb-0">Search Projects</label>
+                <div class="search-form">
+                  <input type="search" class="form-control" placeholder="Search">
+                  <button class="btn" type="button"><i data-feather="search"></i></button>
+                </div>
+              </div>
+							
+						</div>
+					</div>
+	
+				</div>
+			</section>
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3">
+        <section class="request-info pd-y-10">
+          <div class="card mg-t-20">
+            <div class="card-header d-sm-flex align-items-start justify-content-between pd-15">
+              <p class="mg-b-0 tx-12 color-02 tx-uppercase tx-semibold">Department listing <span>(5)</span></p>
+            </div>
+            <div class="card-body pd-15">
+              <div class="table-responsive">
+                
+                <table id="tableData" class="table table-border table-sm tx-13 tx-nowrap mg-b-0">
+                  <thead>
+                    <tr class="tx-14 tx-spacing-1 tx-gray-800 tx-normal bg-gray-100">
+                      <th>Title</th>
+                      <th class="">Requests</th>
+                      <th class="">Employees</th>
+                      <th class="">	&#x0025; Adhered</th>
+                      <th class="">	&#x0025; Breached</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="">Risk Management</td>
+                      <td class="">133</td>
+                      <td class="">4</td>
+                      <td class="">133</td>
+                      <td class="">4</td>
+                    </tr>
+                    <tr>
+                      <td class="">Innovation Team</td>
+                      <td class="">133</td>
+                      <td class="">45</td>
+                      <td class="">63</td>
+                      <td class="">15</td>
+                    </tr>
+                    <tr>
+                      <td class="">Project Managment</td>
+                      <td class="">3</td>
+                      <td class="">23</td>
+                      <td class="">83</td>
+                      <td class="">43</td>
+                    </tr>
+                    <tr>
+                      <td class="">Corporate Control</td>
+                      <td class="">13</td>
+                      <td class="">34</td>
+                      <td class="">33</td>
+                      <td class="">4o</td>
+                    </tr>
+                    <tr>
+                      <td class="">Card Control</td>
+                      <td class="">133</td>
+                      <td class="">40</td>
+                      <td class="">13</td>
+                      <td class="">4</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div><!-- table-responsive -->
+            </div><!-- card-body -->
+          </div><!-- card -->
+        </section>
+
+        
+      </div>
+    </div>
+
+
+
+    
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/feather-icons/feather.min.js"></script>
+    <script src="../../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.stack.js"></script>
+    <script src="../../lib/jquery.flot/jquery.flot.resize.js"></script>
+
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.sampledata.js"></script>
+    <script src="../../lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="../../lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script>
+      $('#tableData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+      function goBack() {
+        window.history.back();
+      };
+     
+    </script>
+   
+  </body>
+</html>
