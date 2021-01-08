@@ -66,3 +66,10 @@ background-color: rgba(255, 175, 175, 1);
 .text-muted{
     color: rgba(71, 71, 71, 1)!important;
 }
+.sign-icon{
+    width:17px!important;
+    height: 17px!important;
+}
+.nav-link.active{
+    font-weight: 700!important;
+}
