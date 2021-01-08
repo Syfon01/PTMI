@@ -51,9 +51,9 @@
 .card-footer-bg{
     background-color: rgba(216, 216, 216, 1)!important;
 }
-.comment-box{
-    background: #FFFFFF;
-border: 1px solid #CEAAAA;
+.btn-comment{
+    background: #FFFFFF!important;
+border: 1px solid #CEAAAA!important;
 box-sizing: border-box;
 border-radius: 4px;
 }
@@ -73,3 +73,5 @@ background-color: rgba(255, 175, 175, 1);
 .nav-link.active{
     font-weight: 700!important;
 }
+.icon{
+    font-size: 40px!important}

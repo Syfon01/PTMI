@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/ptmi.css">
     <link rel="stylesheet" href="./assets/css/dashforge.css">
     <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   </head>
   <body class="page-profile">
 
@@ -59,11 +60,11 @@
 			<section class="bg-greyish pd-y-20">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 col-12">
+						<div class="col-md-5 col-6 my-2">
               <button onclick="goBack()" class="btn btn-back tx-uppercase tx-11 tx-medium pd-l-0"><i data-feather="arrow-left"></i> Go Back</button>
 							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-5">CIO ORGANIZATION</h4>
 						</div>
-						<div class="col-md-6 row pd-r-0">
+						<div class="col-md-7 row pd-r-0">
               <div class="col-md-6">
                   <label for="" class="mb-0">Search Projects</label>
                   <form action="/search.html">
@@ -74,9 +75,10 @@
                   </form>
               </div>
 							<div class="col-md-6 pd-r-0">
-                  <label for="" class="mb-0">Current data source</label>
-                <div class="form">
-                  <input type="text" id="datepicker" class="form-control" placeholder="select date"></p>
+                  <label for="" class="mb-0">Period</label>
+                  <div id="reportrange" class="form-control date-picker">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
                 </div>
               </div>
 						</div>
@@ -99,11 +101,11 @@
             <div class="card-body pd-y-10">
               <div class="row">
                 <div class="col-md-3 col-6 my-2">
-                  <p class="tx-semibold mg-b-0 tx-14">Entry Date</p>
+                  <p class="tx-semibold mg-b-0 tx-14">Date Logged</p>
                   <small class="tx-12 mg-b-0">12th December 2020</small>
                 </div>
                 <div class="col-md-3 col-6 my-2">
-                  <p class="tx-semibold mg-b-0 tx-14">Closed Date</p>
+                  <p class="tx-semibold mg-b-0 tx-14">Request Closed Date</p>
                   <small class="tx-12 mg-b-0">5th February 2020</small>
                 </div>
                 <div class="col-md-3 col-6 my-2">
@@ -119,25 +121,23 @@
                   <small class="tx-12 mg-b-0">Pending</small>
                 </div>
                 <div class="col-md-3 col-6 my-2">
-                  <p class="tx-semibold mg-b-0 tx-14">Request Closed Date</p>
-                  <small class="tx-12 mg-b-0">5th February 2020</small>
+                  <p class="tx-semibold mg-b-0 tx-14">SLA Status</p>
+                  <small class="tx-12 mg-b-0">Adhered</small>
+                </div>
+                
+                <div class="col-md-3 col-6 my-2">
+                  <p class="tx-semibold mg-b-0 tx-14">SLA (Hours)</p>
+                  <small class="tx-12 mg-b-0">360 Hours</small>
                 </div>
                 <div class="col-md-3 col-6 my-2">
                   <p class="tx-semibold mg-b-0 tx-14">Version Count</p>
                   <small class="tx-12 mg-b-0">5 Versions</small>
                 </div>
-                <div class="col-md-3 col-6 my-2">
-                  <p class="tx-semibold mg-b-0 tx-14">SLA (Hours)</p>
-                  <small class="tx-12 mg-b-0">360 Hours</small>
-                </div>
               </div>
             </div>
             <div class="card-body pd-y-20 bd-t">
               <div class="row">
-                <div class="col-md-3 col-6 my-2">
-                  <p class="tx-semibold mg-b-0 tx-14">SLA Status</p>
-                  <small class="tx-12 mg-b-0">Adherence</small>
-                </div>
+                
                 <div class="col-md-3 col-6 my-2">
                   <p class="tx-semibold mg-b-0 tx-14">Day to Breach</p>
                   <small class="tx-12 mg-b-0">29 Days</small>
@@ -153,8 +153,8 @@
               </div>
             </div>
             <div class="card-footer d-flex justify-content-between card-footer-bg">
-              <p class="comment-box pd-x-20 pd-y-5 mb-0">Comment (4)</p>
-              <button class="btn btn-primary btn-sm pd-x-25 pd-y-5">Escalate</button>
+              <button class="btn btn-sm btn-comment pd-x-20 pd-y-5 mb-0" data-toggle="modal" data-target="#commentModal">Comment (4)</button>
+              <button class="btn btn-primary btn-sm pd-x-25 pd-y-5" data-toggle="modal" data-target="#escalateModal">Escalate</button>
 
             </div>
           </div>
@@ -250,7 +250,7 @@
                 <div class="card-body pd-15">
                     <ul class="list-group list-group-flush tx-13 ">
                       <li class="list-group-item d-flex accordion-bg">
-                        <div class="avatar d-none d-sm-block"><span class="avatar-initial rounded-circle bg-teal"><i class="icon ion-md-checkmark"></i></span></div>
+                        <div class="avatar d-none d-sm-block"><span class="avatar-initial rounded-circle bg-transparent tx-dark"><i class="icon ion-md-refresh"></i></span></div>
                         <div class="pd-sm-l-10">
                           <p class="tx-semibold mg-b-0 tx-14">Akosa, Onyebuchi</p>
                           <small class="tx-12 tx-color-03 mg-b-0">14th December 2020</small>
@@ -262,6 +262,70 @@
             </div>
           </div>
         </section>
+
+        <!--Escalate Modal -->
+        <div class="modal fade" id="escalateModal" tabindex="-1" role="dialog" aria-labelledby="escalateModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header pd-15">
+                <h5 class="modal-title" id="escalateModalLabel">Escalate Request</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body pd-15">
+                <p class="tx-16 mb-0">Select who to escalate to</p>
+                <div class="row">
+                  <div class="col-md-6 col-6 my-2">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                      <label class="custom-control-label" for="customCheck3">Akosa, Onyebuchi</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-6 my-2">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">Adegoke, Ayanfe</label>
+                    </div>                  
+                  </div>
+                  <div class="col-md-6 col-6 my-2">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                      <label class="custom-control-label" for="customCheck4">Osilama, Achere</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer pd-15">
+                <button type="button" class="btn btn-outline-dark btn-sm pd-y-5 pd-x-30" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-sm pd-x-30 pd-y-5">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal -->
+
+        <!--Escalate Modal -->
+        <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header pd-15">
+                <h5 class="modal-title" id="commentModalLabel">Add Project Comment</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body pd-15">
+                <textarea class="form-control" name="" id="" rows="4" placeholder="Enter Here"></textarea>
+              </div>
+              <div class="modal-footer pd-15">
+                <button type="button" class="btn btn-outline-dark btn-sm pd-y-5 pd-x-30" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-sm pd-x-30 pd-y-5">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal -->
       </div>
     </div>
 
@@ -276,6 +340,8 @@
     <script src="../../lib/jquery.flot/jquery.flot.js"></script>
     <script src="../../lib/jquery.flot/jquery.flot.stack.js"></script>
     <script src="../../lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
     <script src="../../assets/js/dashforge.js"></script>
     <script src="../../assets/js/dashforge.sampledata.js"></script>
@@ -286,7 +352,30 @@
     <script>
       function goBack() {
         window.history.back();
-      }
+      };
+       //date picker
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+   
     </script>
    
   </body>

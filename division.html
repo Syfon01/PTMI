@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/ptmi.css">
     <link rel="stylesheet" href="./assets/css/dashforge.css">
     <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   </head>
   <body class="page-profile">
 
@@ -60,10 +61,10 @@
 			<section class="bg-greyish pd-y-20">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 col-12">
+						<div class="col-md-5 col-12">
 							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-20">CIO ORGANISATION</h4>
 						</div>
-						<div class="col-md-6 row pd-r-0">
+						<div class="col-md-7 row pd-r-0">
               <div class="col-md-6">
                   <label for="" class="mb-0">Search Projects</label>
                   <form action="/search.html">
@@ -74,9 +75,10 @@
                   </form>
               </div>
 							<div class="col-md-6 pd-r-0">
-                  <label for="" class="mb-0">Current data source</label>
-                <div class="form">
-                  <input type="text" id="datepicker" class="form-control" placeholder="select date"></p>
+                  <label for="" class="mb-0">Period</label>
+                  <div id="reportrange" class="form-control date-picker">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
                 </div>
               </div>
 						</div>
@@ -91,7 +93,7 @@
               <div class="card card-body pd-15 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Logged Requests</p>
-                  <h1 class="mb-0">43</h1>
+                  <h3 class="mb-0">43</h3>
                 </div>
               </div>
             </a>
@@ -101,7 +103,7 @@
               <div class="card card-body pd-15 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Pending Requests</p>
-                  <h1 class="mb-0">43</h1>
+                  <h3 class="mb-0">43</h3>
                 </div>
               </div>
             </a>
@@ -111,7 +113,7 @@
               <div class="card card-body pd-15 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Breached SLA Requests</p>
-                  <h1 class="mb-0">43</h1>
+                  <h3 class="mb-0">43</h3>
                 </div>
               </div>
             </a>
@@ -121,7 +123,7 @@
               <div class="card card-body pd-x-15 pd-y-10 card-height">
                 <div class="d-flex justify-content-between">
                   <p class="tx-uppercase col-6 mb-0 tx-12 pd-x-5 color-02 tx-semibold">Completed Request within SLA</p>
-                  <h1 class="mb-0">43</h1>
+                  <h3 class="mb-0">43</h3>
                 </div>
               </div>
             </a>
@@ -409,7 +411,9 @@
     <script src="../../lib/jquery.flot/jquery.flot.js"></script>
     <script src="../../lib/jquery.flot/jquery.flot.stack.js"></script>
     <script src="../../lib/jquery.flot/jquery.flot.resize.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  
     <script src="../../assets/js/dashforge.js"></script>
     <script src="../../assets/js/dashforge.sampledata.js"></script>
 
@@ -656,10 +660,29 @@ var ctx1 = document.getElementById('chartBar2').getContext('2d');
           }
     		};
 
-        // datepicker
+      });
+      //date picker
+    var start = moment().subtract(29, 'days');
+    var end = moment();
 
-        $('#datepicker1').datepicker();
-      })
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
     </script>
   </body>
 </html>
