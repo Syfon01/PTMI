@@ -12,10 +12,10 @@
     color: #696969;
 }
 .bg-deep-blue{
-    background-color: #002062;
+    background-color: #DB4C3F;;
 }
 .bg-light-blue{
-    background-color: #00D0D0;
+    background-color: #ffcccb;
 }
 .table thead th, .table tbody th{
     font-weight: 400!important;
@@ -95,4 +95,7 @@ background-color: rgba(255, 175, 175, 1);
 
 .page-content{
     padding-bottom: 5rem; 
+}
+.df-logo{
+    color: #DB4C3F!important;
 }
