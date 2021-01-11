@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="./assets/css/dashforge.css">
     <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
   </head>
+  <style>
+    *{
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    }
+    body { -webkit-font-smoothing: antialiased; }
+    </style>
   <body class="page-breached">
 
     <header class="navbar navbar-header navbar-header-fixed bg-white shadow-sm">
@@ -39,7 +46,8 @@
         </ul>
       </div>
       <div class="navbar-right">
-			<div>View as</div>	
+      <div>View as</div>	
+				<div class="avatar avatar-sm ml-3"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
 			<div class="ml-3">
         <div class="styled">
           <select class="custom-select" type="button" onChange="window.location.href=this.value">
@@ -50,12 +58,13 @@
           </select>
         </div>
 			</div>
-				<div class="avatar avatar-sm ml-3"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+				
+				<div class="ml-3"><img src="./assets/img/favicon.png" alt="logo"></div>
       </div>
 			</div>
     </header>
 
-    <div class="content content-fixed pd-0">
+    <div class="content content-fixed pd-0 main-container">
 			<section class="bg-greyish pd-y-20">
 				<div class="container">
 					<div class="row">
@@ -79,7 +88,7 @@
 	
 				</div>
 			</section>
-      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3 page-content">
         <section class="request-info pd-y-10">
             <div class="card accordion-bg">
               <div class="card-body pd-15">
@@ -164,6 +173,11 @@
 
         
       </div>
+      <section class="footer text-white">
+        <div class="container">
+          <p class="tx-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+        </div>
+      </section>
     </div>
 
 
