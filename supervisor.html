@@ -31,50 +31,112 @@
     </style>
   <body class="page-profile">
 
-    <header class="navbar navbar-header navbar-header-fixed bg-white shadow-sm">
-			<div class="container">
-				<a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+    <header class="navbar navbar-header navbar-header navbar-header-fixed bg-white shadow-sm">
+      <div class="container">
+      <a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
       <div class="navbar-brand">
-        <a href="../../index.html" class="df-logo">PTMI</a>
-      </div><!-- navbar-brand -->
-      <div id="navbarMenu" class="navbar-menu-wrapper">
-        <div class="navbar-menu-header">
-          <a href="../../index.html" class="df-logo">PTMI</a>
-          <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
-        </div>
+        <a href="/dashboard.html" class="">
+          <h1 class="tx-white mg-y-0 head-text">ESS</h1>
+        </a>
+      </div>
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+          <div class="navbar-menu-header">
+            <a href="/dashboard.html" class="">
+              <h1 class="tx-white mg-y-0 head-text">ESS</h1>
+            </a>
+            <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+          </div>
+        
         <ul class="nav navbar-menu">
-          
+          <li class="nav-item "><a href="" class="nav-link  "> Home</a></li>
+          <li class="nav-item "><a href="" class="nav-link"> Potential Assessment</a></li>
+          <li class="nav-item  "><a href="" class="nav-link">360 Assessment</li>
+          <li class="nav-item  "><a href="/dashboard.html" class="nav-link ml-2 pd-l-0 bene active">SLA Manager</li>
         </ul>
       </div>
-      <div class="navbar-right">
-      <div>View as</div>	
-				<div class="avatar avatar-sm ml-3"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
-      
-			<div class="ml-3">
-        <div class="styled">
-          <select class="custom-select" type="button" onChange="window.location.href=this.value">
-            <option selected>Supervisor</option>
-            <option value="/dashboard.html">Individual</option>
-            <option value="/division.html">Division Head</option>
-            <option value="/management.html">Management</option>
-          </select>
-          
+  
+      <div class="navbar-right">      
+        <div class="dropdown dropdown-notification">
+          <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+            <i data-feather="bell"></i>
+            <span>2</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header">Notifications</div>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500"
+                    class="rounded-circle" alt=""></div>
+                <div class="media-body mg-l-15">
+                  <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                  <span>Mar 15 12:32pm</span>
+                </div>
+              </div>
+            </a>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500"
+                    class="rounded-circle" alt=""></div>
+                <div class="media-body mg-l-15">
+                  <p><strong>Joyce Chua</strong> just created a new blog post</p>
+                  <span>Mar 13 04:16am</span>
+                </div>
+              </div>
+            </a>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500"
+                    class="rounded-circle" alt=""></div>
+                <div class="media-body mg-l-15">
+                  <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+                  <span>Mar 13 02:56am</span>
+                </div>
+              </div>
+            </a>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online"><img src="https://via.placeholder.com/500"
+                    class="rounded-circle" alt=""></div>
+                <div class="media-body mg-l-15">
+                  <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                  <span>Mar 12 10:40pm</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+          </div>
+        </div>      
+        <div class="dropdown dropdown-profile">
+          <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+            <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+          <div class="dropdown-menu dropdown-menu-right tx-13">
+            <div class="avatar avatar-lg mg-b-15"><img src="https://via.placeholder.com/500" class="rounded-circle"
+                alt=""></div>
+            <h6 class="tx-semibold mg-b-5">Uzo Samuel</h6>
+            <p class="mg-b-25 tx-12 tx-color-03">Business Analsyst</p>
+  
+            <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+            <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+            <div class="dropdown-divider"></div>
+            <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+          </div>
+        </div>
+        <div class="mg-l-20 img-div">
+          <img src="./assets/img/uba.svg" alt="" class="logo-img">
         </div>
       </div>
-				<div class="ml-3"><img src="./assets/img/favicon.png" alt="logo"></div>
       </div>
-			</div>
     </header>
-
+  
     <div class="content content-fixed pd-0 main-container">
-			<section class="bg-greyish pd-y-20">
+			<section class="bg-white pd-y-10">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-5 col-12">
-							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-20">RISK MANAGEMENT TEAM</h4>
+						<div class="col-md-12 col-lg-12 col-xl-4 col-12 pd-y-10">
+							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-20">WELCOME TO SLA MANAGER</h4>
 						</div>
-						<div class="col-md-7 row pd-r-0">
-              <div class="col-md-6">
+						<div class="col-xl-6 col-md-9 col-12 row">
+              <div class="col-md-5 col-12 pd-y-10">
                   <label for="" class="mb-0">Search Projects</label>
                   <form action="/search.html">
                     <div class="search-form">
@@ -83,7 +145,7 @@
                     </div>
                   </form>
               </div>
-							<div class="col-md-6 pd-r-0">
+							<div class="col-md-7 col-12 pd-y-10">
                   <label for="" class="mb-0">Period</label>
                   <div id="reportrange" class="form-control date-picker">
                     <i class="fa fa-calendar"></i>&nbsp;
@@ -91,10 +153,25 @@
                 </div>
               </div>
 						</div>
+            <div class="col-md-2 col-11 pd-y-10">
+                <label for="" class="mb-0">View as</label>	
+              <div class="">
+                <div class="styled">
+                  <select class="custom-select" type="button" onChange="window.location.href=this.value">
+                    <option selected>Supervisor</option>
+                    <option value="/dashboard.html">Individual</option>
+                    <option value="/division.html">Division Head</option>
+                    <option value="/management.html">Management</option>
+                  </select>
+                </div>
+              </div>
+             
+            </div>
 					</div>
 	
 				</div>
 			</section>
+
       <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3 page-content">
         <div class="row mg-b-20">
           <div class="col-md-3 col-12 mt-2">

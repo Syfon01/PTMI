@@ -21,13 +21,6 @@
     <link rel="stylesheet" href="./assets/css/dashforge.css">
     <link rel="stylesheet" href="./assets/css/dashforge.dashboard.css">
   </head>
-  <style>
-    *{
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    }
-    body { -webkit-font-smoothing: antialiased; }
-    </style>
   <body class="page-breached">
 
     <header class="navbar navbar-header navbar-header navbar-header-fixed bg-white shadow-sm">
@@ -133,17 +126,18 @@
 					<div class="row">
 						<div class="col-md-6 col-12">
               <button onclick="goBack()" class="btn btn-back tx-uppercase tx-11 tx-medium pd-l-0"><i data-feather="arrow-left"></i> Go Back</button>
-              <p class="mg-b-0 tx-spacing--1 tx-normal pd-t-5 tx-24">You searched:<span class="tx-semibold">Red App</span> </p>
-              <small class="color-02">5 results</small>
+							<h4 class="mg-b-0 tx-spacing--1 tx-normal pd-t-5">All of Your SLA Requests</h4>
 						</div>
 						<div class="col-md-6 row pd-r-0">
               <div class="col-md-6"></div>
               <div class="col-md-6 pd-r-0">
                   <label for="" class="mb-0">Search Projects</label>
-                <div class="search-form">
-                  <input type="search" class="form-control" placeholder="Search">
-                  <button class="btn" type="button"><i data-feather="search"></i></button>
-                </div>
+                  <form action="/search.html">
+                    <div class="search-form">
+                      <input type="search" class="form-control" placeholder="Search">
+                      <button class="btn" type="button" id="searchButton"><i data-feather="search"></i></button>
+                    </div>
+                  </form>
               </div>
 							
 						</div>
@@ -152,88 +146,78 @@
 				</div>
 			</section>
       <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0 mt-3 page-content">
-        <section class="request-info pd-y-10">
-            <div class="card accordion-bg">
-              <div class="card-body pd-15">
-                <div class="d-flex justify-content-between">
-                  <h5 class="">Using Red in the Bank’s Application Interface Survey</h5>
-                  <p>
-                    <span class="badge badge-request tx-14 tx-normal pd-x-10">Sub-Request</span>
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col-md-9 col-lg-7 col-8">
-                    <p class="mb-0">
-                      Dramatically expedite cross-unit innovation before pandemic deliverables.
-                        Assertively transition vertical methods of empowerment.
-                    </p>
-                  </div>
-                  <div class="col-md-3 col-lg-5 col-4">
-                    <div class="float-right">
-                      <p class="mb-0 pd-lg-r-20 pd-r-10 tx-12">
-                        <i data-feather="check" class="tx-success sign-icon"></i>
-                        <span class="tx-semibold tx-uppercase pd-t-1">Adhered</span>
-                      </p>
-                    </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="card accordion-bg mt-3">
-              <div class="card-body pd-15">
-                <div class="d-flex justify-content-between">
-                  <h5 class="">Using Red in the Bank’s Application Interface Survey</h5>
-                  <p>
-                    <span class="badge badge-request tx-14 tx-normal pd-x-10">Sub-Request</span>
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col-md-9 col-lg-7 col-8">
-                    <p class="mb-0">
-                      Dramatically expedite cross-unit innovation before pandemic deliverables.
-                        Assertively transition vertical methods of empowerment.
-                    </p>
-                  </div>
-                  <div class="col-md-3 col-lg-5 col-4">
-                    <div class="float-right">
-                      <p class="mb-0 pd-lg-r-20 pd-r-10 tx-12">
-                        <i data-feather="alert-triangle" class="tx-warning sign-icon"></i>
-                        <span class="tx-semibold tx-uppercase ">breached</span>
-                      </p>
-                    </div>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="card accordion-bg mg-t-15">
-              <div class="card-body pd-15">
-                <div class="d-flex justify-content-between">
-                  <h5 class="">HR Automation</h5>
-                  <p>
-                    <span class="badge badge-request tx-14 tx-normal pd-x-10">Parent Project</span>
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col-md-9 col-lg-7 col-8">
-                    <p class="mb-0">
-                      Completely mesh principle-centered innovation for interactive methods of empowerment. Continually
-                      reintermediate fully researched processes
-                      and 2.0 schemas. Assertively myocardinate visionary systems rather than cost.
-                    </p>
-                  </div>
-                  <div class="col-md-3 col-lg-5 col-4">
-                    <div class="float-right">
-                      <p class="mb-0 pd-lg-r-20 pd-r-10 tx-12">
-                        <i data-feather="check" class="tx-success sign-icon"></i>
-                        <span class="tx-semibold tx-uppercase ">Adhered</span>
-                      </p>
-                    </div>
-                </div>
-              </div>
-            </div>
-            </div>
-          </section>
+        <div class="card">
+          <div class="card-header d-sm-flex align-items-start justify-content-between pd-y-15 pd-x-20">
+            <p class="mg-b-0 tx-12 color-02 tx-uppercase tx-semibold">Your Requests</p>
+            <!-- <a href="./all-requests.html" class="tx-11 btn btn-outline-dark pd-y-5 btn-sm tx-black tx-medium">View all Requests</a> -->
+          </div><!-- card-header -->
+          <div class="card-body pd-y-0 pd-x-0">
+            <div class="table-responsive">
+              <table class="table table-border table-sm tx-13 tx-nowrap mg-b-0">
+                <thead>
+                  <tr class="tx-12 tx-uppercase tx-spacing-1 tx-gray-800 tx-normal bg-gray-100">
+                    <th>Title</th>
+                    <th class="">Date Created</th>
+                    <th class="">SLA (hrs)</th>
+                    <th class="">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Leave Module Management</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">360</td>
+                    <td class=""><span class="badge badge-adhered pd-x-20 pd-t-5 tx-uppercase tx-normal">Adhered</span></td>
+                  </tr>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Manpower Module Managementt</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">200</td>
+                    <td class=""><span class="badge badge-completed pd-x-15 pd-t-5 tx-uppercase tx-normal">Completed</span></td>
+                  </tr>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Payroll Management</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">300</td>
+                    <td class=""><span class="badge badge-completed pd-x-15 pd-t-5 tx-uppercase tx-normal">Completed</span></td>
+                  </tr>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Rewards and Sanctions</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">360</td>
+                    <td class=""><span class="badge badge-pending pd-x-20 pd-t-5 tx-uppercase tx-normal">Pending</span></td>
+                  </tr>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Management</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">160</td>
+                    <td class=""><span class="badge badge-breached pd-x-20 pd-t-5 ">Breached</span></td>
+                  </tr>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Manpower Module Managementt</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">200</td>
+                    <td class=""><span class="badge badge-completed pd-x-15 pd-t-5 tx-uppercase tx-normal">Completed</span></td>
+                  </tr>
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Payroll Management</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">300</td>
+                    <td class=""><span class="badge badge-completed pd-x-15 pd-t-5 tx-uppercase tx-normal">Completed</span></td>
+                  </tr>
 
+                  <tr class="table-row" data-href="/single-request.html">
+                    <td class="">HR Automation - Rewards and Sanctions</td>
+                    <td class="">November 12, 2020</td>
+                    <td class="">360</td>
+                    <td class=""><span class="badge badge-pending pd-x-20 pd-t-5 tx-uppercase tx-normal">Pending</span></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div><!-- table-responsive -->
+          </div><!-- card-body -->
+        </div><!-- card -->
         
       </div>
       <section class="footer bg-white">
@@ -242,8 +226,7 @@
         </div>
       </section>
     </div>
-
-
+    
 
     
     <script src="../../lib/jquery/jquery.min.js"></script>
