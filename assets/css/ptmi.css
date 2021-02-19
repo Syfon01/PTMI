@@ -9,7 +9,9 @@
     height: 100%;
     margin: 0 !important;
   }
-  
+  .avatar img{
+      border: none!important;
+  }
   .navbar-menu .nav-item .nav-link.active {
     background-color: #ECF5FD;
     color: #2C405A !important;
